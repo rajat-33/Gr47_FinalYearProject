@@ -44,7 +44,7 @@ def get_features(path):
 
 
 # Execution starts here
-data_path = pd.read_csv("./data_path.csv")
+# data_path = pd.read_csv("./data_path.csv")
 Features = pd.read_csv("./features.csv")
 
 X = Features.iloc[:, :-1].values
@@ -69,20 +69,20 @@ with open(model_name, 'rb') as file:
     model = pickle.load(file)
 
 
-print("Accuracy of our model on test data : ",
-      model.evaluate(x_test, y_test)[1]*100, "%")
+# print("Accuracy of our model on test data : ",
+#       model.evaluate(x_test, y_test)[1]*100, "%")
 
 
 # ---For Custom Input---
 
-data, sample_rate = librosa.load("./data/test/YAF_base_neutral.wav")
+data, sample_rate = librosa.load("./data/test/testSurprise.wav")
 input = extract_features(data)
 testFile = np.array([input])
 testFile = preprocessing.normalize(testFile)
 
 # for plotting
 samplingFrequency, signalData = wavfile.read(
-    './data/test/YAF_base_neutral.wav')
+    './data/test/testSurprise.wav')
 librosa.display.waveshow(data)
 plt.title("Waveform")
 plt.show()
