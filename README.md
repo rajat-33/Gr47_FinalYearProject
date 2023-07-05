@@ -116,4 +116,4 @@ wrapt 1.14.1
 
 ## Run the train.py file
 
-## Run the test.py file with the proper file
+## Run the test.py file with the proper file name to test a file
