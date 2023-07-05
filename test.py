@@ -74,7 +74,7 @@ with open(model_name, 'rb') as file:
 
 
 # ---For Custom Input---
-
+# input the path of the file you want to test
 data, sample_rate = librosa.load("./data/test/testSurprise.wav")
 input = extract_features(data)
 testFile = np.array([input])
